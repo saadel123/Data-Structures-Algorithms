@@ -1,0 +1,8 @@
+What is good code
+
+Readable
+Scalable = Speed - memory
+as ingeneer you have to write a readable code and respect Memory(Space complexity) the time complexty (memory limit)
+-Readable
+- Memory
+- speed

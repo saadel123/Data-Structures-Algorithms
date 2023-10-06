@@ -1,0 +1,119 @@
+Ordnung, meaning the order of approximation.
+O(n) Linear time O(1000)  hadi katb9a ghada bchakl tzayodi
+O(1) constant Time Dima katb9a 3la chkal flate line very scalable
+
+Rule 1: Worst Case
+Rule 2: Remove Constants
+Rule 3: Different terms for inputs
+Rule 4: Drop Non Dominants
+
+Rule 1: Worst Case
+
+Explanation: When analyzing the time or space complexity of an algorithm using Big O notation, we typically consider the worst-case scenario.
+This means we're interested in how the algorithm performs when it encounters the most challenging input, which may involve the maximum number of iterations or resource usage.
+
+Example:
+for (let i = 0; i < fish.length; i++) {
+    console.log('Running');
+    if (fish[i] === 'nemo') {
+      console.log('Found NEMO!');
+      break;
+    }
+  }
+Rule 2: Remove Constants
+
+Explanation: When analyzing Big O notation, we disregard constant factors and focus on the growth rate of the function concerning the input size.
+This rule helps simplify the notation and makes it more abstract and general.
+
+Example: Suppose you have an algorithm that performs two nested loops. One loop runs n times, and the other runs m times.
+The Big O notation for this algorithm is O(n * m). However, we can remove constants and represent it as O(nm) since the constants (2 in this case)
+do not change the growth rate concerning the input size.
+function printFirstItemThenFirstHalfThenSayHi100Times(items) {
+    console.log(items[0]);
+
+    var middleIndex = Math.floor(items.length / 2);
+    var index = 0;
+
+    while (index < middleIndex) {
+        console.log(items[index]);
+        index++;
+    }
+
+    for (var i = 0; i < 100; i++) {
+        console.log('hi');
+    }
+}
+// O(1+ n/2 + 100)
+// O(n/2 + 1)
+// O(n/2)
+// O(n) This is the most important in an interview and that's what means 'Remove Constants'
+
+function compressBoxesTwice(boxes){
+    boxes.forEach(function(boxes) {
+    console. log( boxes ) ;
+    boxes.forEach(function(boxes) {
+    console. log( boxes ) ;
+    }
+
+// The resul of this function is O(2n) but in interview it doesn't matter we drop the constans and it will be O(n)
+
+function compressBoxesTwice(boxes){
+    boxes.forEach(function(boxes) { // First forEach loop
+        console.log(boxes);
+    });
+
+    boxes.forEach(function(boxes) { // Second forEach loop
+        console.log(boxes);
+    });
+}
+In this code, there are two separate forEach loops that iterate over the boxes array. Each forEach loop has a time complexity of O(n),
+where n is the number of elements in the boxes array.
+
+Since there are two loops that iterate over the same array independently, we can represent the overall time complexity as O(2n).
+However, when using Big O notation, we remove constants, so the final simplified time complexity is O(n).
+
+So, the time complexity (Big O) of compressBoxesTwice is O(n), where n is the number of elements in the boxes array.
+
+Rule 3: Different terms for inputs
+
+Explanation: When an algorithm operates on multiple inputs of different sizes, we represent their sizes with different variables and analyze each term separately.
+This rule helps us account for the influence of different input sizes.
+
+Example:
+function compressBoxesTwice(boxes1, boxes2) {
+    boxes1.forEach(function(box1) { // First forEach loop for boxes1
+        console.log(box1);
+    });
+
+    boxes2.forEach(function(box2) { // Second forEach loop for boxes2
+        console.log(box2);
+    });
+}
+//Result : O(n + m)
+
+  The first forEach loop iterates over the boxes1 array, which has n elements. So, it has a time complexity of O(n).
+
+The second forEach loop iterates over the boxes2 array, which has m elements. So, it has a time complexity of O(m).
+
+Since these loops are independent and not nested, you can simply add their complexities together. So, the overall time complexity is O(n + m).
+
+So, the time complexity of compressBoxesTwice is O(n + m), where n is the number of elements in boxes1, and m is the number of elements in boxes2.
+
+Example2 nestead aray (*): Consider an algorithm that takes two arrays as input and compares every element in the first array to every element in the second array.
+
+function compareArrays(arr1, arr2) {
+  for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr2.length; j++) {
+      // Compare elements of arr1 and arr2
+    }
+  }
+}
+In this case, you would analyze the complexity as O(n * n), where n is the size of arr1, and m is the size of arr2. the result O(n^2)
+
+Rule 4: Drop Non Dominants
+
+Explanation: When an algorithm has multiple terms in its Big O notation, we focus on the most dominant term or the term that grows the fastest concerning the input size.
+ We drop the less dominant terms as they become insignificant as the input size increases.
+
+Example: Consider an algorithm with a time complexity of O(n^2 + 3n + 1). When the input size n is large, the most dominant term is n^2, and the other terms (3n and 1)
+become less significant. So, we drop the non-dominant terms and represent the complexity as O(n^2).
