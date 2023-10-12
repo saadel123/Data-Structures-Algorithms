@@ -1,0 +1,36 @@
+Arrays:
+Store elements in a linear ordered list using integer indices
+Fast access by index (O(1))
+Slow to search for a value (O(n))
+
+Example:
+
+const array = [1, 2, 3];
+
+// Access element at index 1
+array[1]; // 2
+
+// Search for value
+const index = array.indexOf(3); // 2
+Hash Tables:
+Store key-value pairs in a collection of "buckets"
+Keys are hashed to a bucket index for fast lookups
+Faster to search by key (O(1) on average)
+Slower index access than arrays
+
+Example:
+
+const table = {};
+
+table["blue"] = 1;
+table["red"] = 2;
+
+// Lookup value by key
+table["blue"]; // 1
+
+// Check if key exists
+"blue" in table; // true
+When to use each:
+Use arrays when you need ordered access by index
+Use hash tables when you need fast lookups by key
+In summary - arrays are better for indexed access, while hash tables provide faster key-based lookups through hashing.
