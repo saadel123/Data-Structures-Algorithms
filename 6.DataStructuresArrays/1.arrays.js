@@ -18,7 +18,9 @@ strings.unshift('x'); // O(n) - Adding an element to the beginning of the array 
 strings.shift(); // O(n) - Removing the first element from the array also requires shifting all existing elements one position to the left.
 
 // Splice allows adding an element at a specific position in the array
+
 strings.splice(2, 0, 'alien'); // O(n) - Adding an element at a specific index requires shifting elements to accommodate the new element. (استيعاب العنصر الجديد.)
+//0 Used to mention how many element you want to remove from the array and it starts from 0
 
 // Concatenation: Combines two or more arrays into a new array
 const combinedArray = strings.concat(numbers); // O(m + n) - Creating a new array by combining two arrays has a time complexity proportional to the size of the resulting array.
