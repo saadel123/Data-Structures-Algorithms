@@ -1,0 +1,34 @@
+// Stacks
+
+//google
+//udemy. com
+// youtube
+
+// Arrays
+//Linkedl Lists
+myanswer: linked list will work better in this case esealy doubly linked list when it
+comes to browser hisorty (and they have something called cach locallity which makes them faster when it comes to accessing to the memory)
+
+
+//Queues
+
+Matt- JOy— Samir-Matt— Pavel
+
+//Arrays
+// Linked Lists
+Myanswer: is array since it have a fast acces memory (wrong)
+when using array we will have to unshift all the indexes and this operation o(n) for example
+we have
+ 0      1     2     3    4
+Matt- JOy— Samir-Matt— Pavel
+
+and we want to remove Matt the result will be
+ 0      1     2     3
+JOy— Samir-Matt— Pavel
+so this operation take linear time
+but with linked list all we have is apinter to to the tail
+ HEAD                   TAIL
+Matt- JOy— Samir-Matt— Pavel
+all we have to do is o(1) operation by taking rid of the HEAD
+ HEAD                   TAIL
+JOy— Samir-Matt— Pavel

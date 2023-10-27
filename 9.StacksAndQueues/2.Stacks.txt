@@ -1,0 +1,10 @@
+And cues are used again a lot in programming problems and interview questions.
+For example, if you had any sort of waitlist app to perhaps buy tickets for a concert that uses cues,
+what about a restaurant app where you check into the restaurant to see if you can get a table that uses cues?
+What about Uber or Lyft when you want to grab a ride?
+Well, the person that requested the ride first will get priority and then you'll get second.
+And then finally, the most common example of cues is a printer, right?
+If you had a printer at home and you had three people on three different computers at your home, let's
+say your family members and you press print and each person prints different items.
+The person that clicks print first should have their first printout and same for the second person that goes next. And then the third person.
+Now on the right here, I have a couple of words that are different than push and pop.
