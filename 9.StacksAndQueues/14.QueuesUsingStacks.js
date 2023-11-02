@@ -46,3 +46,7 @@ class QueueWithStacks {
   console.log(queue.dequeue()); // Output: 2
   console.log(queue.isEmpty()); // Output: false
   console.log(queue.size());    // Output: 1
+
+
+
+

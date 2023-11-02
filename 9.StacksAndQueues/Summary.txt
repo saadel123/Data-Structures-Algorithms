@@ -1,0 +1,40 @@
+**Stack:**
+- **Use Case:** Stacks are commonly used in scenarios where you need to manage items in a last-in, first-out (LIFO) order. Think of it like a stack of books.
+The last book you put on the stack is the first one you need to take off.
+
+- **JavaScript Example:**
+
+const stack = [];
+
+stack.push(1);      // Add 1 to the stack
+stack.push(2);      // Add 2 to the stack
+const topItem = stack.pop();  // Remove and retrieve the top item (2)
+
+**Queue:**
+- **Use Case:** Queues are used when you want to manage items in a first-in, first-out (FIFO) order. Imagine it like a queue of people waiting in line.
+The person who arrived first is the first to be served.
+
+- **JavaScript Example:**
+
+const queue = [];
+
+queue.push(1);      // Enqueue (add) 1 to the queue
+queue.push(2);      // Enqueue (add) 2 to the queue
+const firstItem = queue.shift();  // Dequeue (remove) the first item (1)
+
+**Differences:**
+
+1. **Order of Operations:**
+   - Stack: LIFO (Last-In, First-Out) - The last item added is the first one removed.
+   - Queue: FIFO (First-In, First-Out) - The first item added is the first one removed.
+
+2. **JavaScript Implementations:**
+   - Stacks are commonly implemented using arrays with `push` to add items and `pop` to remove them.
+   - Queues are implemented using arrays as well, but you use `push` to enqueue (add) items and `shift` to dequeue (remove) items.
+
+3. **Use Cases:**
+   - Stacks are useful for tasks that involve keeping track of a "history," like the back button in a web browser or evaluating mathematical expressions.
+   - Queues are essential for managing tasks in an order-based manner, such as processing tasks in a print queue or handling requests in a web server.
+
+In summary, stacks and queues are essential data structures used in various programming scenarios. Stacks manage items in a last-in, first-out order,
+while queues manage items in a first-in, first-out order. Understanding when to use each data structure is crucial for designing efficient and functional algorithms and systems.
