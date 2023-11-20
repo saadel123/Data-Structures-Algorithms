@@ -1,0 +1,36 @@
+! Anything you do with a recursion CAN be done iteratively (loop)
+
+**Recursive Function:**
+- **Definition:** A function that calls itself during its execution.
+- **Example:** The classic example is calculating the factorial of a number or computing Fibonacci numbers.
+- **How it works:** The function breaks down the problem into smaller sub-problems and calls itself to solve each sub-problem.
+- **Advantages:**
+  - **Readability:** Recursive solutions can be more intuitive, especially for problems with a recursive nature.
+  - **Elegant Code:** Recursive code can be concise and elegant for certain problems.
+
+**Iterative Function:**
+- **Definition:** A function that uses a loop to repeat a specific block of code.
+- **Example:** Calculating the factorial using a `for` loop or iterating over an array.
+- **How it works:** The function uses a loop structure (like `for` or `while`) to repeat a set of instructions until a certain condition is met.
+- **Advantages:**
+  - **Efficiency:** Iterative solutions often use less memory and can be more efficient for certain problems.
+  - **No Stack Overflow Risk:** Iterative solutions are generally safer for large inputs as they don't risk causing a stack overflow.
+
+**When to Use Recursive vs. Iterative:**
+- **Recursive:**
+  - **Nature of the Problem:** When the problem has a recursive structure, like tree traversal or certain mathematical calculations (e.g., Fibonacci).
+  - **Readability:** When a recursive solution leads to clearer and more readable code.
+  - **Less Code:** For some problems, recursive solutions can be more concise.
+
+- **Iterative:**
+  - **Efficiency:** When efficiency and memory usage are critical, as iterative solutions often use less memory.
+  - **No Stack Overflow Risk:** For problems with large inputs where a stack overflow risk exists in a recursive solution.
+
+**Choosing Between Them:**
+- **Balance:** It's often about striking a balance between readability and efficiency.
+- **Nature of the Problem:** Some problems naturally lend themselves to recursive solutions, while others are more naturally solved iteratively.
+- **Stack Overflow Risk:** For problems with large inputs, especially where the risk of a stack overflow exists, an iterative solution might be safer.
+
+In conclusion, both recursive and iterative solutions have their places. The choice depends on the nature of the problem, efficiency considerations,
+and the desire for clear and concise code.
+
