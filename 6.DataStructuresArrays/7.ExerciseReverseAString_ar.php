@@ -1,5 +1,27 @@
 <?php
 
+
+//GPT example
+function reverse($string) {
+    // Split the string into an array of words
+    $words = explode(' ', $string); // O(n)
+    
+    // Reverse the array of words
+    $reversedWords = array_reverse($words); // O(n)
+    
+    // Join the reversed words back into a string
+    $reversedString = implode(' ', $reversedWords); // O(n)
+    
+    // Output the reversed sentence
+    echo $reversedString; // Output: "saad i'm World Hello"
+}
+
+reverse("Hello World i'm saad");
+
+
+
+
+
 function reverseString($str)
 {
   if (is_string($str) && strlen($str) >= 2) {

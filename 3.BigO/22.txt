@@ -1,8 +1,19 @@
-What is good code
+### What is Good Code?
 
-Readable
-Scalable = Speed - memory
-as ingeneer you have to write a readable code and respect Memory(Space complexity) the time complexty (memory limit)
--Readable
-- Memory
-- speed
+Good code is characterized by the following qualities:
+
+1. **Readable**: Code that is easy to read and understand by others. It should also be maintainable, allowing future developers (or yourself) to make changes or fix issues with minimal effort.
+
+2. **Scalable**: Code that performs well as the size of the input or system grows. This includes:
+   - **Speed**: Efficient time complexity (e.g., O(1), O(n)) to ensure the program runs quickly.
+   - **Memory**: Efficient space complexity to minimize memory usage while respecting memory constraints.
+
+As an engineer, you should aim to write **readable code** while balancing **time complexity** (speed) and **space complexity** (memory usage).
+
+---
+
+### Key Principles of Good Code:
+
+- **Readable**: Write code that is self-explanatory with clear variable names, comments where needed, and a structured approach.
+- **Memory-efficient**: Use only the necessary amount of memory to avoid wasting resources.
+- **Fast**: Ensure the algorithm is optimized for the best possible runtime given the constraints.

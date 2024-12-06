@@ -4,6 +4,7 @@ function boooo(n) {
     console.log("booooo");
   }
 }
+//O(1)
 
 // Even as n grows very large, each iteration of the loop will still take the same constant amount of time.
 // Therefore, the overall runtime is directly proportional to the number of loop iterations n. But since the basic

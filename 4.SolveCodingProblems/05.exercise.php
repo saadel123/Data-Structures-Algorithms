@@ -1,44 +1,75 @@
 <?php
-// run php server https://www.youtube.com/watch?v=zT6QrGIfXaU
+
+$array1 = ['A', 'B', 'C'];
+$array2 = ['D', 'E', 'F', 'C'];
 
 function containsCommonItem2($array1, $array2)
 {
-    for ($item = 0; $item < count($array1); $item++) {
-        for ($item2 = 0; $item2 < count($array2); $item2++) {
-            if ($array1[$item] === $array2[$item2]) {
-                return true;
-            }
+    $map = [];
+    for ($i = 0; $i < count($array1); $i++) {
+        $map[$array1[$i]] = true;
+    }
+    for ($j = 0; $j < count($array2); $j++) {
+        if (isset($map[$array2[$j]])) {
+            //or if ($map[$array2[$j]] == true) {
+            echo "Common item found " . $map[$array2[$j]];
+            return;
+
         }
     }
+    echo "No item found";
+}
+
+//the same methode using foeach
+function containsCommonItem($array1, $array2)
+{
+    // Step 1: Convert the first array into a hash map
+    $hashMap = [];
+    foreach ($array1 as $item) {
+        $hashMap[$item] = true; // Store the item as a key in the hash map
+    }
+
+    // Step 2: Check if any element of the second array exists in the hash map
+    foreach ($array2 as $item2) {
+        if (isset($hashMap[$item2])) { // Check if the item is in the hash map
+            return true;
+        }
+    }
+
     return false;
 }
 
-// Function to check for common items
-// function containsCommonItem3($arr1, $arr2)
-// {
-//     foreach ($arr1 as $item) {
-//         if (in_array($item, $arr2)) {
-//             return true;
-//         }
-//     }
-//     return false;
-// }
 
-// function containsCommonItem2($array1, $array2) {
-//     $commonItems = array_intersect($array1, $array2);
-//     return !empty($commonItems);
-// }
 
 
 // Test data
 $array1 = ['A', 'B', 'C'];
-$array2 = ['K', 'L', 'B'];
+$array2 = ['D', 'E', 'F', 'C'];
+
+function common($array1, $array2)
+{
+    $hashmap = [];
+    foreach ($array1 as $item) {
+        $hashmap[$item] = true;
+    }
+
+    foreach ($array2 as $item2) {
+        if ($hashmap[$item2] = true) {
+            echo "Common item was found!";
+            return true;
+        }
+        echo "No Common item found!";
+        return false;
+    }
+}
+
 
 // Check for common items
-$commonItems = containsCommonItem2($array1, $array2);
+common($array1, $array1);
+// $commonItems = containsCommonItem2($array1, $array2);
 
-if ($commonItems) {
-    echo "There are common items between the arrays.\n";
-} else {
-    echo "There are no common items between the arrays.\n";
-}
+// if ($commonItems) {
+//     echo "There are common items between the arrays.\n";
+// } else {
+//     echo "There are no common items between the arrays.\n";
+// }

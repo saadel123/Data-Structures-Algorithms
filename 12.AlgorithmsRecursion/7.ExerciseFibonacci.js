@@ -8,9 +8,9 @@
 
 function fibonacciIterative(n) { // O(n-2) = O(n )
   //code here;
-  let fabionacci = [0, 1];
+  let fabionacci = [0];
 
-  for (let i = 2; i < n + 1; i++) {
+  for (let i = 1; i < n; i++) {
     console.log(fabionacci[i - 2]);
     fabionacci.push(fabionacci[i - 2] + fabionacci[i - 1]); // 0 + 1 = 1
   }
@@ -34,4 +34,6 @@ console.log(fibonacciRecursive(100));
 // For example, when you call fibonacciRecursive(100), the function will make an enormous number of recursive calls, leading to a substantial amount of redundant work.
 // The inefficiency of the recursive approach becomes more apparent as n increases.
 
+// Why we should consider using recursion instead of iteration: Recursion is interesting and clever, especially when it comes to readability.
+// However, it can be costly as recursion and time complexity may not be the best of friends. Nevertheless, recursion shines in tasks such as sorting and tree traversal.
 
