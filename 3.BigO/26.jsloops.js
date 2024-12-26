@@ -1,7 +1,5 @@
 const fish = ['dory', 'bruce', 'marlin', 'nemo'];
-const nemo = ['nemo'];
-const everyone = ['dory', 'bruce', 'marlin', 'nemo', 'gill', 'bloat', 'nigel', 'squirt', 'darla', 'hank'];
-const large = new Array(10000).fill('nemo');
+
 
 function findNemo(fish) {
   for (let i = 0; i < fish.length; i++) {
@@ -30,5 +28,6 @@ const findNemo3 = array => {
 }
 
 
+findNemo(everyone)
 findNemo2(everyone)
 findNemo3(everyone)

@@ -1,3 +1,4 @@
+//Log all pairs of array
 const nemo = [1, 2, 3, 4, 5];
 
 function calc(array) {
