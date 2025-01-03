@@ -9,7 +9,6 @@ strings.push('e'); // O(1) - Adding an element to the end of the array is a cons
 
 // Pop removes the last item from an array
 strings.pop(); // O(1) - Removing the last element from the array is also a constant time operation.
-strings.pop();
 
 // Unshift adds an element to the beginning of the arrays
 strings.unshift('x'); // O(n) - Adding an element to the beginning of the array requires shifting all existing elements one position to the right.

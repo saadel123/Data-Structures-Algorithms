@@ -16,34 +16,37 @@ function mergeSortedArrays(arr1, arr2) {
 
 // mergeSortedArrays([0, 3, 5, 6], [4, 2, 1, 7]);
 
-function mergeSortedArrays2(array1, array2) {
+function  mergeSortedArrays2(array1, array2){
   const mergedArray = [];
-  let arrayItem1 = array1[0];
-  let arrayItem2 = array2[0];
-  let i = 0;
-  let j = 0;
+  let array1Item = array1[0];
+  let array2Item = array2[0];
+  let i = 1;
+  let j = 1;
 
-  if (array1.length === 0) {
-    return console.log(array2);
+  //We should actually move these 2 if statements to line 2 so that we do the checks before we do assignments in line 3 and 4!
+  if(array1.length === 0) {
+    return array2;
   }
-  if (array2.length === 0) {
-    return console.log(array1);
+  if(array2.length === 0) {
+    return array1;
   }
 
-  while (arrayItem1 !== undefined || arrayItem2 !== undefined) {
-    if (!arrayItem2 || arrayItem1 < arrayItem2) { //i use this "!arrayItem2" to avoid indefined when comapring two valaues
-      mergedArray.push(arrayItem1);
-      arrayItem1 = array1[i]; //array1[1++]
-      i++;
-    } else {
-      // arrayItem2 < arrayItem1
-      mergedArray.push(arrayItem2);
-      arrayItem2 = array2[j];
-      j++;
-    }
+  while (array1Item || array2Item){
+      console.log(array1Item+ '  '+ array2Item);
+   if(array2Item === undefined || array1Item < array2Item){
+     mergedArray.push(array1Item);
+     array1Item = array1[i];
+     i++;
+   }
+   else {
+     mergedArray.push(array2Item);
+     array2Item = array2[j];
+     j++;
+   }
   }
   return mergedArray;
 }
+
 
 // console.log(mergeSortedArrays2([0, 3, 5, 6,9], [4, 2, 1, 7]));
 
